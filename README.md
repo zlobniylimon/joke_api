@@ -67,11 +67,13 @@ Response sample:
 ## Get Joke
 **GET** /jokes/{joke_id}
 Response sample:
+```
 {
     "text": "string",
     "id": 0,
     "owner_id": 0
 }
+```
 
 
 ## Update Joke
