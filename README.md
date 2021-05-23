@@ -1,4 +1,4 @@
-#JokeAPI
+# JokeAPI
 
 API for saving and editing jokes. 
 
@@ -9,12 +9,15 @@ API for saving and editing jokes.
  - passlib
  - requests
  - pydantic
+---
 
 ### Description
 #### Authentication 
 HTTPBasic
+--|--
 | Security Scheme Type | HTTP |
 | HTTP Authotization Scheme | basic |
+---
 
 #### Create New User
 **POST** /users/
@@ -32,9 +35,11 @@ Content type: application/json
     "id": 0,
     "jokes": []
 }
+---
 
 #### Get List Jokes
 **GET** /jokes/
+---
 
 #### Create New Joke
 **POST** /jokes/
@@ -49,6 +54,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+---
 
 #### Get Joke
 **GET** /jokes/{joke_id}
@@ -58,6 +64,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+---
 
 #### Update Joke
 **PUT** /jokes/{joke_id}
@@ -73,6 +80,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+---
 
 #### Delete Joke
 **DELETE** /jokes/{joke_id}
