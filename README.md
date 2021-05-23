@@ -14,9 +14,11 @@ API for saving and editing jokes.
 ### Description
 #### Authentication 
 HTTPBasic
+
+| Security Scheme Type | HTTP Authotization Scheme |
 --|--
-| Security Scheme Type | HTTP |
-| HTTP Authotization Scheme | basic |
+| HTTP | basic |
+
 ---
 
 #### Create New User
@@ -35,6 +37,7 @@ Content type: application/json
     "id": 0,
     "jokes": []
 }
+
 ---
 
 #### Get List Jokes
@@ -54,6 +57,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+
 ---
 
 #### Get Joke
@@ -64,6 +68,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+
 ---
 
 #### Update Joke
@@ -80,6 +85,7 @@ Response sample:
     "id": 0,
     "owner_id": 0
 }
+
 ---
 
 #### Delete Joke
