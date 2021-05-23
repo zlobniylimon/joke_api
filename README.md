@@ -21,6 +21,7 @@ HTTPBasic
 
 ## Create New User
 Send username and password for registration.
+
 **POST** /users/
 Request samples:
 Content type: application/json
@@ -44,11 +45,13 @@ Requests must contain header ```Authentication: Basic <credentials>```, where cr
 
 ## Get List Jokes
 Get list of your jokes
+
 **GET**: /jokes/
 
 
 ## Create New Joke
 Create new joke. If text is not sent, joke will be taken from [Geek Joke API](https://geek-jokes.sameerkumar.website/api).
+
 **POST** /jokes/
 Request sample:
 ```
@@ -69,6 +72,7 @@ Response sample:
 
 ## Get Joke
 Get joke by id. Can't get joke from another user.
+
 **GET** /jokes/{joke_id}
 Response sample:
 ```
@@ -82,6 +86,7 @@ Response sample:
 
 ## Update Joke
 Update existing joke. Text and id of the joke must be sent.
+
 **PUT** /jokes/{joke_id}
 Request sample:
 ```
@@ -102,4 +107,5 @@ Response sample:
 
 ## Delete Joke
 Delete your joke.
+
 **DELETE** /jokes/{joke_id}
