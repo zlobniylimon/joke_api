@@ -61,11 +61,11 @@ def create_new_joke(joke: schemas.JokeCreate, db: Session=Depends(get_db), user:
     return db_joke
 
 @app.get("/jokes/")
-def read_own_jokes(db: Session=Depends(get_db), user: models.User=Depends(is_user)):
+def get_list_jokes(db: Session=Depends(get_db), user: models.User=Depends(is_user)):
     return crud.get_jokes(db=db, user=user)
 
 @app.get("/jokes/{joke_id}", response_model=schemas.Joke)
-def read_text_joke(joke_id: int, db: Session=Depends(get_db), user: models.User=Depends(is_user)):
+def get_joke(joke_id: int, db: Session=Depends(get_db), user: models.User=Depends(is_user)):
     db_joke = crud.get_joke(db=db, joke_id=joke_id)
     if not db_joke:
         raise HTTPException(status_code=404, detail="Not exist")
