@@ -9,7 +9,6 @@ API for saving and editing jokes.
  - passlib
  - requests
  - pydantic
----
 
 
 ## Authentication 
@@ -19,7 +18,6 @@ HTTPBasic
 --|--
 | HTTP | basic |
 
----
 
 ## Create New User
 **POST** /users/
@@ -42,12 +40,10 @@ Content type: application/json
 }
 ```
 
----
 
 ## Get List Jokes
 **GET** /jokes/
 
----
 
 ## Create New Joke
 **POST** /jokes/
@@ -67,7 +63,6 @@ Response sample:
 }
 ```
 
----
 
 ## Get Joke
 **GET** /jokes/{joke_id}
@@ -78,7 +73,6 @@ Response sample:
     "owner_id": 0
 }
 
----
 
 ## Update Joke
 **PUT** /jokes/{joke_id}
@@ -98,7 +92,6 @@ Response sample:
 }
 ```
 
----
 
-#### Delete Joke
+## Delete Joke
 **DELETE** /jokes/{joke_id}
