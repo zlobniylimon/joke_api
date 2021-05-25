@@ -91,8 +91,7 @@ Update existing joke. Text and id of the joke must be sent.
 Request sample:
 ```
 {
-    "text": "string",
-    "id": 0
+    "text": "string"
 }
 ```
 Response sample:
