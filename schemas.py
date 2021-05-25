@@ -16,7 +16,6 @@ class Joke(JokeBase):
         orm_mode = True
 
 class JokeUpdate(JokeBase):
-    id: int
     text: str
 
 class UserBase(BaseModel):

@@ -72,8 +72,8 @@ def get_joke(joke_id: int, db: Session=Depends(get_db), user: models.User=Depend
     return joke_owner(db_joke, user)
 
 @app.put("/jokes/{joke_id}", response_model=schemas.Joke)
-def update_joke(joke: schemas.JokeUpdate, db: Session=Depends(get_db), user: models.User=Depends(is_user)):
-    db_joke = crud.get_joke(db=db, joke_id=joke.id)
+def update_joke(joke_id: int, joke: schemas.JokeUpdate, db: Session=Depends(get_db), user: models.User=Depends(is_user)):
+    db_joke = crud.get_joke(db=db, joke_id=joke_id)
     if not db_joke:
         raise HTTPException(status_code=404, detail="Not exist")
     joke_owner(db_joke, user)
